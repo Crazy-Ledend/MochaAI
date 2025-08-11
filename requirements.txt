@@ -5,3 +5,5 @@ google-generativeai==0.4.1
 fastapi
 uvicorn
 setuptools
+asyncio
+nest_asyncio
