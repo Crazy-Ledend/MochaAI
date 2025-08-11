@@ -1,4 +1,3 @@
-# Add at VERY TOP
 import os
 os.environ["LANGCHAIN_TRACING_V2"] = "false"
 os.environ["LANGCHAIN_HANDLER"] = "false"
@@ -23,6 +22,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.chat_history import InMemoryChatMessageHistory
 import json
 import traceback
+import asyncio
+
+try:
+    asyncio.get_event_loop()
+except RuntimeError as e:
+    if "closed" in str(e):
+        asyncio.set_event_loop(asyncio.new_event_loop())
 
 load_dotenv()
 
@@ -167,6 +173,7 @@ async def chat(req: ChatRequest):
         print("Error:", e)
         traceback.print_exc()
         return {"response": "❌ MochaAI encountered an error."}
+
 
 
 
