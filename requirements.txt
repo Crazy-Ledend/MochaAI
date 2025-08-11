@@ -4,3 +4,4 @@ langchain-google-genai==0.0.11
 google-generativeai==0.4.1
 fastapi
 uvicorn
+setuptools
