@@ -8,10 +8,17 @@
     {
       "src": "MochaAi.html",
       "use": "@vercel/static"
+    },
+    { 
+      "src": "MochaAi.Icons/*",
+      "use": "@vercel/static" 
     }
   ],
+  
   "routes": [
     { "src": "^/$", "dest": "/MochaAi.html" },
-    { "src": "^/api/(.*)$", "dest": "api/MochaAi.py" }
+    { "src": "^/api/(.*)$", "dest": "api/MochaAi.py" },
+    { "src": "/MochaAi.Icons/(.*)", "dest": "/MochaAi.Icons/$1" }
   ]
 }
+
