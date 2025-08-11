@@ -22,6 +22,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.chat_history import InMemoryChatMessageHistory
 import json
 import traceback
+
+import nest_asyncio
+nest_asyncio.apply()
+
 import asyncio
 
 try:
@@ -179,6 +183,7 @@ async def chat(req: ChatRequest):
         print("Error:", e)
         traceback.print_exc()
         return {"response": "❌ MochaAI encountered an error."}
+
 
 
 
