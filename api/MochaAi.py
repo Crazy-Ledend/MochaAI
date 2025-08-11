@@ -165,6 +165,8 @@ async def chat(req: ChatRequest):
         return {"response": response.content}
     except Exception as e:
         print("Error:", e)
+        traceback.print_exc()
         return {"response": "❌ MochaAI encountered an error."}
+
 
 
