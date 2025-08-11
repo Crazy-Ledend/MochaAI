@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     { "src": "api/MochaAi.py", "use": "@vercel/python" },
-    { "src": "index.html", "use": "@vercel/static" }
+    { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/MochaAi.py" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/public/index.html" }
   ]
 }
