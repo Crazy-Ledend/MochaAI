@@ -158,6 +158,12 @@ async def chat(req: ChatRequest):
     )
 
     try:
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            
         response = await chat_chain.ainvoke(
             {"input": message},
             config={"configurable": {"session_id": user_id}}
@@ -173,6 +179,7 @@ async def chat(req: ChatRequest):
         print("Error:", e)
         traceback.print_exc()
         return {"response": "❌ MochaAI encountered an error."}
+
 
 
 
