@@ -126,7 +126,7 @@ class ChatRequest(BaseModel):
     character: str = ""
 
 # ✅ Main chat endpoint
-@app.post("/chat")
+@app.post("/api/chat")
 async def chat(req: ChatRequest):
     user_id = req.user_id
     message = req.message
@@ -166,4 +166,5 @@ async def chat(req: ChatRequest):
     except Exception as e:
         print("Error:", e)
         return {"response": "❌ MochaAI encountered an error."}
+
 
