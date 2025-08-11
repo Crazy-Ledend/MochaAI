@@ -22,7 +22,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, Prom
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.chat_history import InMemoryChatMessageHistory
 import json
-
+import traceback
 
 load_dotenv()
 
@@ -166,3 +166,4 @@ async def chat(req: ChatRequest):
     except Exception as e:
         print("Error:", e)
         return {"response": "❌ MochaAI encountered an error."}
+
