@@ -13,12 +13,14 @@
       --user-color: #00c5d7;
       --bg-color: #00111c;
       --font: 'Inder', sans-serif;
+      --cursor-url: url('MochaAi.Icons/NeoPointer.png') 24 24, auto;
+      --cursor-active-url: url('MochaAi.Icons/NeoPointerActive.png') 24 24, auto;
     }
 
     html, body {
       margin: 0;
       height: 100%;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393005739642982440/NeoPointer.png?ex=68719931&is=687047b1&hm=70315d7221beb685211db9a946d8a94d6735de28d0eb95634ecc4475be13d7a6&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-url), auto;
       scroll-behavior: smooth;
     }
 
@@ -35,7 +37,7 @@
       font-size: 1.5em;
       margin-top: 20px;
       left: 4%;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393005739642982440/NeoPointer.png?ex=68719931&is=687047b1&hm=70315d7221beb685211db9a946d8a94d6735de28d0eb95634ecc4475be13d7a6&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-url), auto, auto;
     }
 
     .icon {
@@ -137,7 +139,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-active-url), auto, auto;
     }
 
     .send-button:hover {
@@ -161,7 +163,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-active-url), auto, auto;
     }
     #mic-button:active {
       transform: scale(0.92);
@@ -239,7 +241,7 @@
       font-size: 60px;
       font-family: 'Inder', sans-serif;
       color: #00c5d7;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393005739642982440/NeoPointer.png?ex=68719931&is=687047b1&hm=70315d7221beb685211db9a946d8a94d6735de28d0eb95634ecc4475be13d7a6&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-url), auto, auto;
     }
 
     .glitch-hover::before,
@@ -383,13 +385,13 @@
       height: 40px;
       width: 100%;
       transition: all 0.3s ease;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-active-url), auto, auto;
     }
 
     #settings-dialog select:hover {
       background-color: rgba(0, 255, 255, 0.2);
       border-color: #4bf0ff;
-      cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;
+      cursor: var(--cursor-active-url), auto, auto;
     }
 
     #settings-dialog option {
@@ -432,16 +434,16 @@
   <div id="settings-dialog"
      style="position:fixed; top:80px; right:20px; background:#0e1e29; color:white; padding:20px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); z-index:999; opacity:0; transform:translateY(-20px); pointer-events:none; transition:opacity 0.7s ease, transform 0.3s ease;">
       <strong>Chat Mode:</strong><br>
-      <select id="chat-mode" style="margin-top:5px; padding:5px; width:100%; cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;">
+      <select id="chat-mode" style="margin-top:5px; padding:5px; width:100%; cursor: var(--cursor-active-url), auto, auto;">
         <option value="text">Text Mode</option>
         <option value="voice">Voice Mode</option>
       </select>
     </label>
-    <label style="display:block; cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;">
+    <label style="display:block; cursor: var(--cursor-active-url), auto, auto;">
       <strong>Voice:</strong><br>
       <select id="voice-select" style="margin-top:5px; padding:5px; width:100%;"></select>
     </label>
-    <label style="display:block; margin-top:15px; cursor: url('https://media.discordapp.net/attachments/1312285788473528410/1393002282995417290/NeoPointerActive.png?ex=687195f8&is=68704478&hm=6dbfc38a799b07bc5da153444d51f643ef8a1a8aa30e73bf4a3bb70b9b6aaf83&=&format=webp&quality=lossless&width=24&height=24'), auto;">
+    <label style="display:block; margin-top:15px; cursor: var(--cursor-active-url), auto, auto;">
       <strong>Personality:</strong><br>
       <select id="character-style" style="margin-top:5px; padding:5px; width:100%;">
         <option value="">Default</option>
@@ -466,7 +468,7 @@
 
     <div class="text-box">
       <textarea id="chat-input" placeholder="Say something to Mocha..." rows="2"></textarea>
-      <button class="send-button" id="mic-button" title="Speak"><img src="https://media.discordapp.net/attachments/1312285788473528410/1393004523726835822/mic_hollow1.png?ex=6871980f&is=6870468f&hm=3ff2d349a8b6a595a05c02803729657ec8e98e9037a50056a8df9554629c8178&=&format=webp&quality=lossless&width=30&height=30" alt="Mic Icon"></button>
+      <button class="send-button" id="mic-button" title="Speak"><img src="MochaAi.Icons/mic_hollow.png" 30 30 auto, alt="Mic Icon"></button>
       <button class="send-button" id="send-button">Brew</button>
     </div>
   </div>
@@ -532,7 +534,7 @@
     const selectedCharacter = characterSelect.value;
 
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch("http://127.0.0.1:8000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -588,7 +590,7 @@
     let silenceTimer;
 
     recognition.onstart = () => {
-      micBtn.innerHTML = `<img src="https://media.discordapp.net/attachments/1312285788473528410/1393005361358962688/mic1.png?ex=687198d6&is=68704756&hm=eddc350bbfd07c2416d5f3f61d2d34d4ae70de17bb0c5f734e2dfbc7bd388c52&=&format=webp&quality=lossless&width=30&height=30">`;
+      micBtn.innerHTML = `<img src="MochaAi.Icons/mic_hollow.png">`;
       
       // Start silence detection timer
       silenceTimer = setTimeout(() => {
@@ -600,12 +602,14 @@
       // User has stopped talking
       clearTimeout(silenceTimer); // Clear early if needed
       recognition.stop();
+      console.log("Speech ended, recognition stopped.");
     };
 
     recognition.onaudioend = () => {
       // Audio stream ended (microphone closed or silence)
       clearTimeout(silenceTimer);
-      micBtn.innerHTML = `<img src="https://media.discordapp.net/attachments/1312285788473528410/1393004523726835822/mic_hollow1.png?ex=6871980f&is=6870468f&hm=3ff2d349a8b6a595a05c02803729657ec8e98e9037a50056a8df9554629c8178&=&format=webp&quality=lossless&width=30&height=30">`;
+      micBtn.innerHTML = `<img src="MochaAi.Icons/mic.png">`;
+      console.log("Audio ended, recognition stopped.");
     };
 
     recognition.onresult = function (event) {
@@ -618,11 +622,12 @@
       console.error("Speech recognition error:", event.error);
       appendMessage("Mic error: " + event.error, 'meaw');
       clearTimeout(silenceTimer);
-      micBtn.innerHTML = `<img src="https://media.discordapp.net/attachments/1312285788473528410/1393004523726835822/mic_hollow1.png?ex=6871980f&is=6870468f&hm=3ff2d349a8b6a595a05c02803729657ec8e98e9037a50056a8df9554629c8178&=&format=webp&quality=lossless&width=30&height=30">`;
+      micBtn.innerHTML = `<img src="MochaAi.Icons/mic.png">`;
     };
 
     micBtn.onclick = () => {
       recognition.start();
+      console.log("Voice recognition started");
     };
   }
 
