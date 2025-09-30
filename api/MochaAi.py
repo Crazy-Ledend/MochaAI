@@ -162,17 +162,16 @@ async def chat(req: ChatRequest):
     )
 
     try:
-        try:
-            loop = asyncio.get_running_loop()
-        except RuntimeError:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            
-        response = await chat_chain.ainvoke(
-            {"input": message},
-            config={"configurable": {"session_id": user_id}}
-        )
-
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        
+    response = await chat_chain.ainvoke(
+        {"input": message},
+        config={"configurable": {"session_id": user_id}}
+    )
+    try:
         # ✅ Count messages and trigger summarization every 10 user inputs
         message_counters[user_id] = message_counters.get(user_id, 0) + 1
         if message_counters[user_id] % 10 == 0:
@@ -183,6 +182,7 @@ async def chat(req: ChatRequest):
         print("Error:", e)
         traceback.print_exc()
         return {"response": "❌ MochaAI encountered an error."}
+
 
 
 
